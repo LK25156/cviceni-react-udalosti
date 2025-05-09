@@ -6,5 +6,13 @@ Zadání 2: Pokud uživatel z textového políčka vše smaže, vypište „Uži
 */
 
 export const Uloha4 = () => {
-  return <input />;
+  const handleInput = (event) => {
+    const text = event.target.value;
+    if(text.trim() === '') {
+      console.log('Uživatel nenapsal nic');
+    } else {
+      console.log('Uživatel napsal: ${text}');
+    }
+  };
+  return <input type="text" onInput={handleInput} />;
 };
