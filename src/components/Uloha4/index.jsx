@@ -11,7 +11,7 @@ export const Uloha4 = () => {
     if(text.trim() === '') {
       console.log('Uživatel nenapsal nic');
     } else {
-      console.log('Uživatel napsal: ${text}');
+      console.log('Uživatel napsal:' + event.target.value);
     }
   };
   return <input type="text" onInput={handleInput} />;
